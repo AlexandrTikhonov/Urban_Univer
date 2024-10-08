@@ -43,11 +43,28 @@
 #
 # win_1, win_2 = lottery(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 # print(win_1, win_2)
+#
+# def test(a = 2, b = True):
+#     print(a, b)
+#
+# test(False, 'ok')
+# test([1, 2])
+# test(*[1, 2])
+# test(**[1, 2])
 
-def test(a = 2, b = True):
-    print(a, b)
 
-test(False, 'ok')
-test([1, 2])
-test(*[1, 2])
-test(**[1, 2])
+def get_matrix(n, m, value):
+   matrix = []
+   for i in range(n):
+       matrix.append([])
+       #print(i, matrix)
+       for j in range(m):
+           matrix[i].append(value)
+           #print(matrix, end= '\n')
+   return matrix
+
+
+
+print(get_matrix(3, 4, 8))
+
+
