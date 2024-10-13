@@ -1,14 +1,24 @@
-import random
-
-num = random.randint(3, 20)
-
-def find_code():
-    print(num)
-    for i in range(1, int(num/2 + 1)):
-        for j in range(2,21):
-            if  num % (i + j) == 0 and i != j:
-                print(i, j, end= "", sep="")
+calls = 0
 
 
+def count_calls():
+    global calls
+    calls += 1
 
-find_code()
+
+def string_info(string):
+    count_calls()
+    return len(string), string.upper(), string.lower()
+
+
+def is_contains(string, list_to_search):
+    count_calls()
+    return string.lower() in [item.lower() for item in list_to_search]
+
+
+print(string_info('Capybara'))
+print(string_info('Armageddon'))
+print(is_contains('Urban', ['ban', 'BaNaN', 'Urban']))
+print(is_contains('cycle', ['recycling', 'cyclic']))
+
+print(calls)
