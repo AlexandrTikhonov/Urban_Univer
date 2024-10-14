@@ -3,7 +3,10 @@ variants = ('.com', '.ru', '.net')
 
 def send_email(message, recipient,*, sender="university.help@gmail.com"):
     if '@' not in recipient or not recipient.endswith(variants):
-        print('Невозможно отправить письмо с адреса <sender> на адрес <recipient>')
+        print(f'Невозможно отправить письмо с адреса <{sender}> на адрес <{recipient}>')
+        return
+    if '@' not in sender or not sender.endswith(variants):
+        print(f"Невозможно отправить письмо с адреса <{sender}> на адрес <{recipient}>")
         return
     if recipient == sender:
         print('Нельзя отправить письмо самому себе!')
