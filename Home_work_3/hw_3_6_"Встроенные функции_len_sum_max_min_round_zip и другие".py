@@ -35,22 +35,22 @@ b = [1, 1, 1]
 # print(all(a_1))
 # print(dir(a_2))
 # print(type(a_3))
-# print(isinstance(a, str)) # --> print(type(a) == str)
+# print(isinstance(a, str)) # --> print(type(a)) == str
 # print(a_3 == b)
 # print(id(a_3))
 # print(id(b))
 # print(a_3 is b)
 
-c = b
-c[0] = 2
+# c = b
+# c[0] = 2
+#
+# print(c)
+# print(b)
+# print(id(c))
+# print(id(b))
+# print(c is b)
 
-print(c)
-print(b)
-print(id(c))
-print(id(b))
-print(c is b)
-
-print(help(a))
-print(help(print))
+# print(help(a))
+# print(help(print))
 
 # ---------------------------------------
