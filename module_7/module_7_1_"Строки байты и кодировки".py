@@ -1,14 +1,15 @@
 # print('hello')  # ASCII
 # print(ord('a'))
+# print(ord('A'))
 #
 # ### ----------------------
-# a = 'hello'
-# chars = []
-# for i in a:
-#     chars.append(ord(i))
-#
-# print(chars)
-#
+a = 'hello'
+chars = []
+for i in a:
+    chars.append(ord(i))
+
+print(chars)
+
 # ### ---------------------
 # s = ''
 # for i in chars:
