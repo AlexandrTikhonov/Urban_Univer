@@ -1,5 +1,5 @@
-first = ['Strings', 'Student', 'Computer']
-second = ['Стройка', 'Урбан', 'Компьютер']
+first = ['Strings', 'Student', 'Computers']
+second = ['Строка', 'Урбан', 'Компьютер']
 
 first_result = (abs(len(x) - len(y)) for x, y in zip(first, second) if len(x) != len(y))
 print(list(first_result))
