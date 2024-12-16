@@ -11,10 +11,10 @@ def write_words(word_count, file_name):
 
 
 
-write_words(5, 'example1.txt')
-write_words(30, 'example2.txt')
-write_words(200, 'example3.txt')
-write_words(100, 'example4.txt')
+write_words(5, 'files_1/example1.txt')
+write_words(30, 'files_1/example2.txt')
+write_words(200, 'files_1/example3.txt')
+write_words(100, 'files_1/example4.txt')
 
 threads = []
 
