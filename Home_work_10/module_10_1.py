@@ -10,12 +10,16 @@ def write_words(word_count, file_name):
     print(f'Завершилась запись в файл {file_name}')
 
 
+start_first = time.time()
+write_words(5, 'example1.txt')
+write_words(30, 'example2.txt')
+write_words(200, 'example3.txt')
+write_words(100, 'example4.txt')
+end_first = time.time()
+time_first = end_first - start_first
+print(f'Работа потоков: {time_first: .6f}') # --> Работа потоков:  33.566622
 
-write_words(5, 'files_1/example1.txt')
-write_words(30, 'files_1/example2.txt')
-write_words(200, 'files_1/example3.txt')
-write_words(100, 'files_1/example4.txt')
-
+start_last = time.time()
 threads = []
 
 threads.append(threading.Thread(target=write_words, args=(10, 'example5.txt')))
@@ -28,3 +32,7 @@ for thread in threads:
 
 for thread in threads:
     thread.join()
+
+end_last = time.time()
+time_last = end_last - start_last
+print(f'Работа потоков: {time_last: .6f}') # --> Работа потоков:  20.040313
